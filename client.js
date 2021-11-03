@@ -18,11 +18,35 @@ const connect = function () {
 
   conn.on('connect', () => {
     conn.write('Name: OSK');
+    
+    setTimeout(() => {
+      conn.write('Move: up')
+    }, 100);
+    setInterval(() => {
+      conn.write('Move: up')
+    }, 300);
+    setTimeout(() => {
+      conn.write('Move: right')
+    }, 40);
+    setInterval(() => {
+      conn.write('Move: left')
+    }, 50);
+    setInterval(() => {
+      conn.write('Move: down')
+    }, 175);
+    
+    
+
   })
 
+
+  // conn.on('connect', () => {
+  //   conn.write('Name: OSK');
+  // })
+
   conn.on('connect', () => {
-    //conn.write('Say: (UwU)/');
-    conn.write('Say: Hey');
+    conn.write('Say: \\(o_o)/');
+    //conn.write('Say: LMAO');
   })
 
   // interpret incoming data as text

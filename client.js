@@ -9,7 +9,7 @@ const connect = function () {
 
   conn.on("connect", () => {
     // code that does something when the connection is first established
-    console.log("..connected to the game server!");
+    console.log("Successfully connected to game server!");
   });
 
   conn.on('data', (data) => {
@@ -21,7 +21,8 @@ const connect = function () {
   })
 
   conn.on('connect', () => {
-    conn.write('Say: (UwU)/');
+    //conn.write('Say: (UwU)/');
+    conn.write('Say: Hey');
   })
 
   // interpret incoming data as text

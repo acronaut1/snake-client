@@ -7,11 +7,6 @@ const connect = function() {
     port: PORT //50541 // PORT number here,
   });
 
-  // conn.on("connect", () => {
-  //   // when the connection is first established
-  //   console.log("Successfully connected to game server!");
-  // });
-
    // interpret incoming data as text
    conn.setEncoding("utf8");
 
@@ -22,7 +17,7 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Beware it lives!");
     conn.write('Name: OSK');
-     //setInterval(() => {conn.write("Move: up");}, 200);
+     setInterval(() => {conn.write("Move: up");}, 200);
      //setInterval(() => {conn.write("Move: left");}, 1000);
      //setInterval(() => {conn.write("Move: down");}, 2000); 
      //setInterval(() => {conn.write("Move: right");}, 3000); 
@@ -31,11 +26,6 @@ const connect = function() {
   conn.on("data", (data) => {
     console.log('Server:', data);
   });
-
-  // conn.on('connect', () => {
-  //   conn.write('Say: \\(o_o)/');
-  //   //conn.write('Say: LMAO');
-  // })
 
   return conn;
 };

@@ -45,15 +45,16 @@ const handleUserInput = function(key) {
   }
   if (key === "c") {connection.write("Say: o_o");}
   if (key === "v") {connection.write("Say: -_-");}
-  if (key === "h") {connection.write("Say: Hey")}
-  if (key === "0") {connection.write("Say: dont")}
-  if (key === "1") {connection.write("Say: forget")}
-  if (key === "2") {connection.write("Say: to ")}
-  if (key === "3") {connection.write("Say: follow")}
-  if (key === "4") {connection.write("Say: me")}
-  if (key === "5") {connection.write("Say: for")}
-  if (key === "6") {connection.write("Say: busines")}
-  if (key === "7") {connection.write("Say: inquiries")}
+  if (key === "0") {connection.write("Say: ▀▄▀▄▀")}
+  if (key === "9") {connection.write("Say: ▄▀▄▀▄")}
+  if (key === "1") {connection.write("Say: hello")}
+  if (key === "2") {connection.write("Say: (●'◡'●)")}
+  if (key === "3") {connection.write("Say: █▓▒░░")}
+  if (key === "4") {connection.write("Say: █▓▒░░")}
+  if (key === "5") {connection.write("Say: ██▓▒░")}
+  if (key === "6") {connection.write("Say: ███▓░")}
+  if (key === "7") {connection.write("Say: (⌐■_■)")}
+  if (key === "8") {connection.write("Say: Watch Out!")}
 
   if (key === "w") {
     console.log("UP!");

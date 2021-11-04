@@ -1,9 +1,10 @@
 const net = require("net");
+const { IP, PORT} = require("./constants");
 
 const connect = function() {
   const conn = net.createConnection({
-    host: "165.227.47.243", // "IP address here",
-    port: 50541 // PORT number here,
+    host: IP, //"165.227.47.243", // "IP address here",
+    port: PORT //50541 // PORT number here,
   });
 
   // conn.on("connect", () => {
@@ -21,10 +22,10 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Beware it lives!");
     conn.write('Name: OSK');
-     setInterval(() => {conn.write("Move: up");}, 200);
-     setInterval(() => {conn.write("Move: left");}, 1000);
-     setInterval(() => {conn.write("Move: down");}, 2000); 
-     setInterval(() => {conn.write("Move: right");}, 3000); 
+     //setInterval(() => {conn.write("Move: up");}, 200);
+     //setInterval(() => {conn.write("Move: left");}, 1000);
+     //setInterval(() => {conn.write("Move: down");}, 2000); 
+     //setInterval(() => {conn.write("Move: right");}, 3000); 
   });
 
   conn.on("data", (data) => {

@@ -55,7 +55,7 @@ const handleUserInput = function(key) {
   if (key === "6") {connection.write("Say: busines")}
   if (key === "7") {connection.write("Say: inquiries")}
 
-  if (key === MOVE_UP_KEY) {
+  if (key === "w") {
     console.log("UP!");
     connection.write("Move: up");
   }
